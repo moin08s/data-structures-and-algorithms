@@ -151,7 +151,8 @@ int pop(int* stack, int* top)
 		(*top)--;
 	}
 	else
-	{
+	{	printf("|  %d  | ---> Top\n", stack[i]);
+		printf("........\n");
 		printf("Stack is empty\n");
 	}
 	return 0; // Added a return value to satisfy the function signature
@@ -169,21 +170,18 @@ void display(int* stack, int* top,int size)
 		printf("Stack:\n");
 		// Loop from the bottom of the stack to the top
 		for(int i = *top; i >= 0; i--)
-		{     	if(i!=*top)
+		{    if(i==*top && is_full(size,top))
+			{
+			printf("........\n");
+			printf("|  %d  | ---> Top\n", stack[i]);
+			printf("........\n");
+			}
+		    else
 			{
 			printf("|  %d  |\n", stack[i]);
 			printf("........\n");
 			}
-			else if(i==*top && is_full(size,top))
-			{
-			printf("........\n");
-			printf("|  %d  | ---> Top\n", stack[i]);
-			printf("........\n");
-			}
-			else{
-			printf("|  %d  | ---> Top\n", stack[i]);
-			printf("........\n");
-			}
+		
 			
 			
 		}
