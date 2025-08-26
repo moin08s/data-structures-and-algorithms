@@ -146,7 +146,23 @@ void display(int* queue,int* front, int* rear,int* size)
 
 	
 		printf("Queue:\n");
-		
+				
+				for(int j=(*rear)-1;j<(*size)-1;j++)
+					{ if(j==(*size)-1)
+					{
+					printf("........\n");	
+					printf("|      |\n");
+					printf("........\n");
+					 
+					}
+					else
+					{
+					printf("........\n");	
+					printf("|      |\n");
+					printf("........\n");
+					
+					}
+					}
 		                for(int k=0;k<*front;k++)
 					{ 
 					
@@ -184,22 +200,15 @@ void display(int* queue,int* front, int* rear,int* size)
 							}
 					}
 				
-					for(int j=(*rear)-1;j<(*size)-1;j++)
-					{ if(j==(*size)-1)
-					{
+					for(int k=0;k<*front;k++)
+					{ 
+					
 					printf("........\n");	
 					printf("|      |\n");
-					printf("........\n");
-					 
-					}
-					else
-					{
 					printf("........\n");	
-					printf("|      |\n");
-					printf("........\n");
 					
 					}
-					}
+			
 					
 			  				
 			   		
@@ -210,4 +219,3 @@ void display(int* queue,int* front, int* rear,int* size)
 	
 	
 }
-
